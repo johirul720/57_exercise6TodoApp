@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #153677, #4e084d);
+  /* overflow: hidden; */
+  padding: 10px;
+}
+.taskContainer{
+  width: 100%;
+  max-width: 530px;
+  background-color: #fff;
+  margin: 100px auto 20px;
+  padding: 30px 20px 50px;
+  border-radius: 10px;
+}
+.taskContainer h2{
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+.taskContainer h2 img{
+  width: 30px;
+  margin-left: 10px;
+}
+
+.addItems{
+  width: 100%;
+  background-color: #eae6e6;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.addItems input{
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-radius: 40px;
+  padding: 14px;
+  font-size: 15px;
+}
+.addItems button{
+  border: 0;
+  outline: 0;
+  border-radius: 40px;
+  padding: 14px 30px;
+  background-color: #ef6c01;
+  font-weight: 500;
+  font-size: 17px;
+  color: #fff;
+  cursor: pointer;
+}
+
+ul li{
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 8px;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  background-position: center;
+}
+
+ul li.checked{
+  text-decoration: line-through;
+  
+}
+ul li.checked::before{
+  background-image: url(images/checked.png);
+}
+ul li span{
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover{
+  background-color: #ddd;
+}
